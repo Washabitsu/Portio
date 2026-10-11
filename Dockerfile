@@ -3,11 +3,11 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Restore first: this layer is reused until the package list changes
-COPY Portio/Portio/Portio.csproj Portio/Portio/
-RUN dotnet restore Portio/Portio/Portio.csproj
+COPY Portio/Portio.csproj Portio/
+RUN dotnet restore Portio/Portio.csproj
 
-COPY Portio/Portio/ Portio/Portio/
-RUN dotnet publish Portio/Portio/Portio.csproj -c Release -o /app/publish --no-restore
+COPY Portio/ Portio/
+RUN dotnet publish Portio/Portio.csproj -c Release -o /app/publish --no-restore
 
 # Run
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
