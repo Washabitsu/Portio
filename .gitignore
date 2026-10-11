@@ -1,0 +1,42 @@
+# Build output
+bin/
+obj/
+publish/
+artifacts/
+
+# Visual Studio, Rider and VS Code: settings of one machine or one user
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.DotSettings.user
+
+# Test results and coverage reports
+TestResults/
+*.trx
+coverage*.xml
+*.coverage
+
+# Secrets: local settings, certificates and keys
+.env
+.env.*
+!.env.example
+*.pfx
+*.pem
+*.key
+secrets.json
+appsettings.*.local.json
+
+# Data Protection keys, if Portio is run locally with DataProtection:KeysPath pointing into the project
+keys/
+
+# Logs
+logs/
+*.log
+
+# Files that Windows and macOS create
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,6 @@
+@Portio_HostAddress = http://localhost:5056
+
+GET {{Portio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
